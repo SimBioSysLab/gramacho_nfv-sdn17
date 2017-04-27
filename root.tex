@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+
+\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                          % you want to use the \thanks command
+
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+\usepackage{epsfig,endnotes,float}
+\usepackage{ifthen,graphicx,verbatim}
+\usepackage{xspace,balance}
+\usepackage{colortbl,booktabs}
+\usepackage[obeyspaces,hyphens]{url}
+\usepackage{amsmath,cite}
+\usepackage{inconsolata,array}
+\usepackage{xspace,balance}
+\usepackage{acronym}
+\usepackage{subfig}
+
+\newcommand{\ie}{\emph{i.e.},\xspace}
+\newcommand{\eg}{\emph{e.g.},\xspace}
+\newcommand{\etal}{\emph{et al.\ }}
+\newcommand{\fixme}{\large\textbf{FIXMEFIXMEFIXME!}\normalsize}
+
+\newenvironment{itemtight}{
+ \begin{list}{$\bullet$\hfill}
+  {\setlength{\parsep}{0ex}\setlength{\itemsep}{0ex}
+   \setlength{\labelwidth}{0.10in}\setlength{\labelsep}{0.05in}
+   \setlength{\leftmargin}{0.15in}\setlength{\rightmargin}{0.0in}
+  }
+}{
+ \end{list}
+}
+
+\newcounter{enumtight}
+\newenvironment{enumtight}{
+ \begin{list}{\arabic{enumtight}.\hfill}
+  {\usecounter{enumtight}
+   \setlength{\parsep}{0ex}\setlength{\itemsep}{0ex}
+   \setlength{\labelwidth}{0.10in}\setlength{\labelsep}{0.05in}
+   \setlength{\leftmargin}{0.15in}\setlength{\rightmargin}{0.0in}
+  }
+}{
+ \end{list}
+}
+
+\title{\LARGE \bf
+Architecting SDNs for Wireless Mesh Networks \fixme - Working title: we need a name for this system.
+}
+
+
+\author{Sergio Gramacho and Avani Wildani% <-this % stops a space
+\thanks{*This work is sponsored by the CAPES foundation and Emory PERS}% <-this % stops a space
+\thanks{Contact authors at: Department of Math and Computer Science,
+        Emory University, Atlanta, GA.
+        {\tt\small \{sgramac,avani\}@mathcs.emory.edu}}%
+}
+
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+\begin{itemize}
+    \item Connectivity in the 3rd world is terrible
+    \items WMNs help this, and trying out different SDN-WMN architectures is critical to building better systems at scale
+    \item Simulating WMNs at scale is fraught with tricky details
+    \item We solved the tricky details and increased the complexity of the system we could simulate from X to Y. (\fixme need a definition of complexity) 
+\end{itemize}
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+\begin{itemize}
+    \item Motivate problem: access to Internet
+    \item Briefly summarize approach and key improvements
+\end{itemize}
+
+\section{Background}
+
+\subsection{Other simulation frameworks}
+\subsection{Real deployments and their limitations}
+
+\section{Architecture}
+
+\subsection{ns3}
+\subsection{AI}
+
+
+\section{Scalability Improvements}
+
+\begin{itemize}
+    \item Discuss GCE implementation
+    \item Go through, in detail, the different problems and solutions you implemented to up the number of nodes.
+\end{itemize}
+
+\begin{itemize}
+    \item GRAPH: # nodes vs. runtime
+    \item GRAPH: Runtime change with distributed vs. SDN models
+    \item GRAPH: 
+\end{itemize}
+
+\section{Discussion}
+\begin{itemize}
+    \item Talk about why the architecture choices you made worked.
+    \item Discuss what you'd do to parallelize across multiple machines
+\end{itemize}
+\section{Conclusions}
+\end{document}
